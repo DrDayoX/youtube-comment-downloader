@@ -55,8 +55,8 @@ def main(argv=None):
     comment_specification.add_argument("--commentexcl", "-cE", type=str, default=None, help="Only saves the comment if the comment not contains the given string")
     comment_specification.add_argument("--commentexclmatch", "-cEM", type=str, default=None, help="Only saves the comment if the comment not matches the given string")
 
-    parser.add_argument("--minlikes", "-minL", type=int, default=0, help="Sets the minimum like requirement for the comment (inclusive)")
-    parser.add_argument("--maxlikes", "-maxL", type=int, default=-1, help="Sets the maximum amount of likes a comment can have (inclusive)")
+    parser.add_argument("--minlikes", "-min", type=int, default=0, help="Sets the minimum like requirement for the comment (inclusive)")
+    parser.add_argument("--maxlikes", "-max", type=int, default=-1, help="Sets the maximum amount of likes a comment can have (inclusive)")
 
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--verbose", "-v", action="store_true", help="Prints all actions made by the program")
