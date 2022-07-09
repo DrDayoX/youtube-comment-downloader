@@ -68,6 +68,8 @@ For Youtube IDs starting with - (dash) you will need to run the script with:
 * Python 2.7+
 * dateparser
 * requests
+* dateparser
+* alive-progress
 
 The python packages can be installed with:
 
