@@ -6,7 +6,7 @@ Simple script for downloading Youtube comments without using the Youtube API wit
 Preferably inside a [python virtual environment](https://virtualenv.pypa.io/en/latest/) install this package via
 
 ```
-pip install https://github.com/eiskaffe/youtube-comment-downloader/archive/testing.zip
+pip install https://github.com/eiskaffe/youtube-comment-downloader/archive/master.zip
 ```
 
 ### Usage
@@ -66,6 +66,7 @@ For Youtube IDs starting with - (dash) you will need to run the script with:
 
 ### Dependencies
 * Python 2.7+
+* dateparser
 * requests
 * dateparser
 * alive-progress
