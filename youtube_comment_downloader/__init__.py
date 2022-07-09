@@ -138,6 +138,7 @@ def main(argv=None):
                 with alive_bar(limit, ctrl_c=False, unknown="triangles", stats=stats) as bar:
                     if args.presearch: bar.text = "found: 0)"
                     for comment in generator:
+                        count = bar.current()
                         comment_json = json.dumps(comment, ensure_ascii=False)
                         sys.stdout.flush()
                         if args.presearch:
@@ -194,6 +195,7 @@ def main(argv=None):
                 with alive_bar(limit, ctrl_c=False, unknown="triangles", stats=stats) as bar:
                     if args.presearch: bar.text = "found: 0)"
                     for comment in generator:
+                        count = bar.current()
                         comment_json = json.dumps(comment, ensure_ascii=False)
                         sys.stdout.flush()  
                         
@@ -236,7 +238,7 @@ def main(argv=None):
                             bar()
                             print(comment_json.decode('utf-8') if isinstance(comment_json, bytes) else comment_json, file=fp)
                             if limit != 0 and bar.current() >= limit: break
-                    count = bar.current()
+
 
             if args.presearch:
                 if args.quiet:
