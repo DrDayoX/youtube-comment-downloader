@@ -175,7 +175,7 @@ def main(argv=None):
                             bar()
                             print(comment_json.decode('utf-8') if isinstance(comment_json, bytes) else comment_json, file=fp)
                             if limit != 0 and bar.current() >= limit: break
-                    count = bar.current()
+                        count = bar.current()
 
             if args.presearch:
                 if args.quiet:
@@ -236,7 +236,7 @@ def main(argv=None):
                             bar()
                             print(comment_json.decode('utf-8') if isinstance(comment_json, bytes) else comment_json, file=fp)
                             if limit != 0 and bar.current() >= limit: break
-                    count = bar.current()
+                        count = bar.current()
 
             if args.presearch:
                 if args.quiet:
