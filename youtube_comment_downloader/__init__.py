@@ -142,6 +142,7 @@ def main(argv=None):
                         sys.stdout.flush()
                         if args.presearch:
 
+                            if limit != 0 and bar.current() >= limit: break
                             bar.text = f"found: {presearch_founds})"
                             bar()
 
@@ -170,7 +171,6 @@ def main(argv=None):
 
                             print(comment_json.decode('utf-8') if isinstance(comment_json, bytes) else comment_json, file=fp)
                             presearch_founds += 1
-                            if limit != 0 and bar.current() >= limit: break
                         else:
                             bar()
                             print(comment_json.decode('utf-8') if isinstance(comment_json, bytes) else comment_json, file=fp)
