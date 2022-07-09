@@ -129,7 +129,7 @@ def main(argv=None):
             if link[:5] == "https"
             else downloader.get_comments(link, args.sort, args.language)
         )
-        
+        count = 0
         presearch_founds = 0    
         if args.append is None:
             with io.open(output, 'w', encoding='utf8') as fp:
