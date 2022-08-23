@@ -1,6 +1,3 @@
-#Written by egbertbouman
-#Forked by DrDayoX
-
 from __future__ import print_function
 
 import json
